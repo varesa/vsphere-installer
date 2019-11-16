@@ -103,6 +103,7 @@ def set_guestinfo(vm, ip, gateway):
         vim.option.OptionValue(key="guestinfo.userdata", value=userdata_base64),
         vim.option.OptionValue(key="guestinfo.userdata.encoding", value="base64")
     ]
+    print("Setting guestinfo")
     vm.Reconfigure(cspec)
 
 

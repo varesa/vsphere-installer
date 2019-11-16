@@ -81,6 +81,7 @@ def main():
     answers['datastore'] = datastores[answers['datastore']]
 
     create_vm(content, **answers)
+    print("Done.")
 
     Disconnect(si)
 
