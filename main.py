@@ -61,9 +61,9 @@ def main():
         folders[recurse_name(folder)] = folder
 
     questions = [
-        inquirer.List('template', message='Template:', choices=sorted(templates.keys())),
-        inquirer.List('resourcepool', message='Resource pool:', choices=sorted(resourcepools.keys())),
-        inquirer.List('folder', message='Folder:', choices=sorted(folders.keys())),
+        inquirer.List('template', message='Template', choices=sorted(templates.keys())),
+        inquirer.List('resourcepool', message='Resource pool', choices=sorted(resourcepools.keys())),
+        inquirer.List('folder', message='Folder', choices=sorted(folders.keys())),
         inquirer.List('network', message='Network', choices=sorted(networks.keys())),
         inquirer.List('datastore', message='Datastore:', choices=sorted(datastores.keys())),
         inquirer.Text('name', message='Name:'),
