@@ -112,8 +112,12 @@ def configure_network(vm, network, ip, gateway):
     set_guestinfo(vm, ip, gateway)
 
 
-def create_vm(content, template, resourcepool, folder, network, datastore, name, ip, gateway, confirm):
+def create_vm(content, template, resourcepool, folder, network, datastore, name, ip, gateway, confirm, poweron):
     assert confirm
 
     vm = clone_template(content, template, resourcepool, folder, datastore, name)
     configure_network(vm, network, ip, gateway)
+
+    if poweron:
+        vm.PowerOn()
+

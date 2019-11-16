@@ -69,6 +69,7 @@ def main():
         inquirer.Text('name', message='Name:'),
         inquirer.Text('ip', message='IP address:'),
         inquirer.Text('gateway', message='Gateway:'),
+        inquirer.Confirm('poweron', message='Automatically power on the VM?', default=True),
         inquirer.Confirm('confirm', message='Everything correct?', default=True)
     ]
 
