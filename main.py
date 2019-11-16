@@ -80,8 +80,11 @@ def main():
     answers['network'] = networks[answers['network']]
     answers['datastore'] = datastores[answers['datastore']]
 
-    create_vm(content, **answers)
-    print("Done.")
+    if answers['confirm']:
+        create_vm(content, **answers)
+        print("Done.")
+    else:
+        print("Aborting.")
 
     Disconnect(si)
 
